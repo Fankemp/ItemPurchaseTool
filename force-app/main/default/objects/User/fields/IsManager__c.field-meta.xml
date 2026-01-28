@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IsManager__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Custom flag to identify if the user has manager-level privileges for the Item Purchase Tool. Used for access control logic in LWC and Apex.</description>
+    <inlineHelpText>Check this box if the user should have manager access to the purchase tool.</inlineHelpText>
+    <label>IsManager</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

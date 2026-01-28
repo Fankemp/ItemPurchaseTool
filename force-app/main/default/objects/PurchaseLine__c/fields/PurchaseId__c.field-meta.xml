@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PurchaseId__c</fullName>
+    <description>Master-Detail relationship to the parent Purchase record. Ensures cascade deletion of lines if the purchase is removed.</description>
+    <inlineHelpText>Select the parent purchase for this line item.</inlineHelpText>
+    <label>Purchase</label>
+    <referenceTo>Purchase__c</referenceTo>
+    <relationshipLabel>PurchaseLine</relationshipLabel>
+    <relationshipName>PurchaseLines</relationshipName>
+    <relationshipOrder>1</relationshipOrder>
+    <reparentableMasterDetail>false</reparentableMasterDetail>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MasterDetail</type>
+    <writeRequiresMasterRead>false</writeRequiresMasterRead>
+</CustomField>
