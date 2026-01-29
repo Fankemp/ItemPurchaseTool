@@ -1,18 +1,27 @@
-# Salesforce DX Project: Next Steps
+# 🛒 Salesforce Item Purchase Tool
 
-Now that you’ve created a Salesforce DX project, what’s next? Here are some documentation resources to get you started.
+A custom Salesforce application designed to manage purchases and items efficiently. This project demonstrates best practices in Apex development, including the Handler Pattern, Bulkification, and LWC integration.
 
-## How Do You Plan to Deploy Your Changes?
+## 🚀 Features
 
-Do you want to deploy a set of changes, or create a self-contained application? Choose a [development model](https://developer.salesforce.com/tools/vscode/en/user-guide/development-models).
+- **Automated Calculations**: Real-time calculation of `GrandTotal__c` and `TotalItems__c` on the Purchase object via Apex Triggers.
+- **Bulkified Logic**: Efficient data processing using Maps and Sets to stay within Salesforce Governor Limits.
+- **Data Integrity**: Robust handling of Insert, Update, Delete, and Undelete scenarios for Purchase Lines.
+- **Custom UI (In Progress)**: A modern Lightning Web Component (LWC) for a seamless shopping experience.
 
-## Configure Your Salesforce DX Project
+## 🏗️ Technical Architecture
 
-The `sfdx-project.json` file contains useful configuration information for your project. See [Salesforce DX Project Configuration](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_ws_config.htm) in the _Salesforce DX Developer Guide_ for details about this file.
+### Data Model
+- **Purchase__c**: The parent object storing total amounts and status.
+- **PurchaseLine__c**: Junction-like object connecting Purchases to Items with quantity and unit cost.
+- **Item__c**: Product catalog with pricing information.
 
-## Read All About It
+### Backend Logic
+- `PurchaseLineTrigger`: A lightweight trigger acting as a router.
+- `PurchaseLineTriggerHandler`: The "brain" of the operation, using optimized SOQL and Map-based logic for calculations.
 
-- [Salesforce Extensions Documentation](https://developer.salesforce.com/tools/vscode/)
-- [Salesforce CLI Setup Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_setup.meta/sfdx_setup/sfdx_setup_intro.htm)
-- [Salesforce DX Developer Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_intro.htm)
-- [Salesforce CLI Command Reference](https://developer.salesforce.com/docs/atlas.en-us.sfdx_cli_reference.meta/sfdx_cli_reference/cli_reference.htm)
+## 🛠️ Installation
+
+1. Clone the repository:
+   ```bash
+   git clone [YOUR_REPOSITORY_LINK]
